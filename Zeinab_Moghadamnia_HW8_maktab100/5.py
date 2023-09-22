@@ -3,10 +3,12 @@ class Indenter:
         self.level = 0
 
     def __enter__(self):
+        '''increase space'''
         self.level += 1
         return self
 
     def __exit__(self, exc_type, exc_value, traceback):
+        '''decrease space'''
         self.level -= 1
 
     def print(self, text):
