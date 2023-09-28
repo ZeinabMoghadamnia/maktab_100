@@ -1,0 +1,7 @@
+SELECT country, COUNT(customer_id) AS customer_count
+FROM country
+JOIN city ON country.country_id = city.country_id
+JOIN address ON city.city_id = address.city_id
+JOIN customer ON address.address_id = customer.address_id
+GROUP BY country
+ORDER BY country;

@@ -1,0 +1,8 @@
+SELECT customer.first_name AS "First Name",
+	customer.last_name AS "Last Name",
+	COUNT(rental.rental_id) AS "Number of Rentals"
+FROM customer
+JOIN rental ON customer.customer_id = rental.customer_id
+GROUP BY customer.first_name, customer.last_name
+ORDER BY "Number of Rentals" DESC
+LIMIT 10;

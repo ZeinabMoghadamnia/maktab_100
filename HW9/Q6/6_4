@@ -1,0 +1,9 @@
+SELECT film.title AS "Film Title",
+	film.rental_duration AS "Rental Duration (Days)",
+	AVG(payment.amount) AS "Average Rate"
+FROM film
+JOIN inventory ON film.film_id = inventory.film_id
+JOIN rental ON inventory.inventory_id = rental.inventory_id
+JOIN payment ON rental.rental_id = payment.rental_id
+GROUP BY film.title, film.rental_duration
+ORDER BY film.title;

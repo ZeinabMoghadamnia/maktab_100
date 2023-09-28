@@ -1,0 +1,8 @@
+SELECT film.title, 
+       EXTRACT(DAY FROM (return_date - rental_date)) AS rental_duration,
+       payment.amount
+FROM film
+JOIN inventory ON film.film_id = inventory.film_id
+JOIN rental ON inventory.inventory_id = rental.inventory_id
+JOIN payment ON rental.rental_id = payment.rental_id
+WHERE EXTRACT(DAY FROM (return_date - rental_date)) > 5 AND payment.amount < 15;
