@@ -1,0 +1,11 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<p>{{ request.username  }}</p>
+{% for item in tasks %}
+    <form method="post" >
+        {% csrf_token %}
+        {{ forms.as_p}}
+    </form>
+{% endfor %}
+{% endblock  %}

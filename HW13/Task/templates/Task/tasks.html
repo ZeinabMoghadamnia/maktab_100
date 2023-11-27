@@ -1,0 +1,9 @@
+{% extends '_base.html' %}
+{% block content %}
+    {% for item in tasks %}
+        <h3>{{ item.title }}</h3>
+        <h5>{{ item.start_date }} - {{ item.end_date }}</h5>
+        <h6>{{ item.start_time }} - {{ item.end_time }}</h6>
+        <p>{{ item.descrption }}</p>
+    {% endfor %}
+{% endblock %}

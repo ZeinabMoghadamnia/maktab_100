@@ -1,0 +1,31 @@
+{% extends "_base.html" %}
+{% block content %}
+{{messages}}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+<div class="d-flex justify-content-center align-items-center">
+    <div class="card text-center w-50">
+        <div class="card-header">
+        دوباره ثبت نام
+        </div>
+        <div class="card-body">
+            <form action="" method="post" novalidate>
+                {% csrf_token %}
+                {{ form.as_p}}
+                <input type="submit" value="ثبت نام" class="btn btn-success">
+            </form>
+        </div>
+        <div class="card-footer text-body-secondary">
+            تا فردا ثبت نام...
+        </div>
+    </div>
+</div>
+{% endblock  %}
