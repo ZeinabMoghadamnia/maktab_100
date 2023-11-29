@@ -31,7 +31,7 @@ def user_login(request):
             if user is not None:
                 login(request, user)
                 messages.success(request, 'با موفقیت وارد شدید!', 'success')
-                return redirect('user_page_url')
+                return redirect('user_page_url', user_id=user.id)
         else:
             messages.error(request, 'نام کاربری یا رمزعبور اشتباه است!!', 'danger')
     else:
@@ -41,7 +41,7 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     messages.success(request, 'با موفقیت از سایت خارج شدید!', 'danger')
-    return redirect('Task/home')
+    return redirect('home')
 
     
     

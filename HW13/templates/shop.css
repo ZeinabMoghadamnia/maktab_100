@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'vazir';
+    
+    src: url(fonts/Vazir.woff) format('woff');
+}
+
+body {
+    font-family: 'vazir' !important;
+    color: dimgray !important;
+    background-color: #ffe0ca !important;
+}
+
+.bg-color-medium {
+    background-color: #ff8a5a !important;
+}
+
+.bg-color-vibrant {
+    background-color: #ff672b !important;
+}
+
+.bg-color-pastel {
+    background-color: #ffe0ca !important;
+}
+
+.orange-text {
+    color: #ff672b !important;
+}
+
+.radius {
+    border-radius: 15px;
+}
+
+.border-orange {
+    border-color: #ff672b !important;
+    border-left-style: none !important;
+    border-right-style: none !important;
+    box-sizing: 30px;
+}

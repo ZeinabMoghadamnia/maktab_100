@@ -14,14 +14,17 @@
 <div class="row">
     {% for item in tasks %}
     <div class="col-md-4 mb-3">
-      <div class="card border-3 border-danger">
+      <div class="card">
         <div class="card-body">
             
-            <h3>{{ item.title }}</h3>
+            <h2><a class="text-decoration-none text-dark" href="">{{item.title}}</a></h2>
             <h5>{{ item.start_date }} - {{ item.end_date }}</h5>
             <h6>{{ item.start_time }} - {{ item.end_time }}</h6>
             <p>{{ item.descrption }}</p>
-            
+            {% if user.is_authenticated %}
+            <a href="{% url 'delete_task' item.id %}" class="btn btn-danger">حذف</a>
+            <a href="{% url 'edit_task' item.id %}" class="btn btn-primary">ویرایش</a>
+            {% endif %}
           {% comment %} <a href="#" class="btn btn-danger">نمایش جزئیات</a> {% endcomment %}
         </div>
       </div>

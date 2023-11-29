@@ -1,5 +1,7 @@
-{% extends '_base.html' %}
-{% block login %}
+{% extends "_base.html" %}
+
+{% block content %}
+
 {% if messages %}
 <ul class="messages">
     {% for message in messages %}
@@ -10,12 +12,12 @@
     {% endfor %}
 </ul>
 {% endif %}
-<div class="mt-3 col-lg-2 col-md-2 col-sm-2 text-start">
-  <div>
-    <a class="btn rounded text-light rounded-pill bg-danger" href="{% url 'user_login' %}" role="button">
-        ورود / ثبت نام
-    </a>
 
+<div class="row">
+    {% for item in category %}
+    <div class="col-md-6 mb-3">    
+        <h2><a href="{% url 'detail_category' category_id=item.id %}" class="btn btn-danger">{{item}}</a></h2>
+    </div>
+    {% endfor %}
   </div>
-</div>
-{% endblock %}
+{% endblock  %}

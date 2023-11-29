@@ -1,10 +1,10 @@
 from django import forms
 from .models import *
 
-class CreateTaskForm(forms.ModelForm):
+class EditTaskForm(forms.ModelForm):
     class Meta:
         model = Tasks
-        fields = ['title', 'descrption', 'start_date', 'end_date', 'start_time', 'end_time', 'user']
+        fields = ['title', 'descrption', 'start_date', 'end_date', 'start_time', 'end_time', 'user', 'category']
     # title = forms.CharField(max_length=100)
     # descrption = forms.CharField(max_length=500)
     # start_date = forms.DateField(default=jdatetime.datetime.today().strftime('%Y-%m-%d'))
