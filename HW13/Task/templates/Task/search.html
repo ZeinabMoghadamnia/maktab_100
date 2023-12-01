@@ -11,7 +11,7 @@
 </ul>
 {% endif %}
 {% for result in results %}
-    <h4><a class="text-decoration-none text-dark" href="{% url 'detail_task' result.id %}">{{result}}</a></h4>       
+    <h4><a class="text-decoration-none btn btn-danger" href="{% url 'detail_task' result.id %}">{{result}}</a></h4>       
 {% endfor %}
 
 {% endblock %}

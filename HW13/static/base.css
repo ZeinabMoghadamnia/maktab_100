@@ -1,0 +1,44 @@
+/* @font-face {
+    font-family: 'vazir';
+    
+    src: url(fonts/Vazir.woff) format('woff');
+} */
+
+body {
+    /* font-family: 'vazir' !important; */
+    background-image: url('../media/HW13/img1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-color-medium {
+    background-color: #d062ff !important;
+}
+
+.bg-color-vibrant {
+    background-color: #641b88 !important;
+}
+
+.bg-color-vibrant-o {
+    background-color: rgb(116, 27, 136, 0.5) !important;
+    /* opacity: 0.5; */
+}
+
+.bg-color-pastel {
+    background-color: #eaa1ed !important;
+}
+
+.orange-text {
+    color: #741b88 !important;
+}
+
+.radius {
+    border-radius: 15px;
+}
+
+.border-orange {
+    border-color: #741b88 !important;
+    border-left-style: none !important;
+    border-right-style: none !important;
+    box-sizing: 30px;
+}
